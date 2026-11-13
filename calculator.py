@@ -24,6 +24,18 @@ import math
 
 import math
 
+def square_root(a):
+    try:
+        return math.sqrt(a)
+    except ValueError:
+        raise ValueError(f"Cannot take the square root of {a}")
+
+def hypotenuse(a, b):
+    try:
+        return math.hypot(a, b)
+    except TypeError:
+        raise TypeError(f"Must input numbers")
+
 def add(a, b):
     return a + b
 
