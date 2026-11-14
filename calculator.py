@@ -19,6 +19,10 @@ def logarithm(a, b): loga(b)# use math library/raise ValueError
 def exponent(a, b): a^b
 
 """
+<<<<<<< HEAD
+=======
+# First example
+>>>>>>> a0327771d0a3c329d4d52bf33adbc44ce0973960
 import math
 
 def square_root(a):
