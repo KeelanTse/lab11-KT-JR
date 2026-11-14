@@ -22,8 +22,6 @@ def exponent(a, b): a^b
 # First example
 import math
 
-import math
-
 def square_root(a):
     try:
         return math.sqrt(a)
