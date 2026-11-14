@@ -22,24 +22,38 @@ def exponent(a, b): a^b
 # First example
 import math
 
+import math
+
+def square_root(a):
+    try:
+        return math.sqrt(a)
+    except ValueError:
+        raise ValueError(f"Cannot take the square root of {a}")
+
+def hypotenuse(a, b):
+    try:
+        return math.hypot(a, b)
+    except TypeError:
+        raise TypeError(f"Must input numbers")
+
 def add(a, b):
     return a + b
 
-def sub(a, b):
+def subtract(a, b):
     return a - b
 
-def mul(a, b):
+def multiply(a, b):
     return a * b
 
-def div(a, b):
+def divide(a, b):
     if a == 0:
         raise ZeroDivisionError("Cannot divide by zero")
     return b / a
 
-def log(a, b):
+def logarithm(a, b):
     if a <= 0 or a == 1 or b <= 0:
-        raise ValueError("Base must be positive and not 1, and b must be positive")
+        raise ValueError("Invalid input for logarithm")
     return math.log(b, a)
 
-def exp(a, b):
+def exponent(a, b):
     return a ** b
