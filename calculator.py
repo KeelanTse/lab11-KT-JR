@@ -19,22 +19,21 @@ def logarithm(a, b): loga(b)# use math library/raise ValueError
 def exponent(a, b): a^b
 
 """
-# First example
-import math
-
 import math
 
 def square_root(a):
     try:
+        if a < 0:
+            raise ValueError("Cannot take the square root of a negative number")
         return math.sqrt(a)
-    except ValueError:
-        raise ValueError(f"Cannot take the square root of {a}")
+    except TypeError:
+        raise TypeError("Input must be a number")
 
 def hypotenuse(a, b):
     try:
         return math.hypot(a, b)
     except TypeError:
-        raise TypeError(f"Must input numbers")
+        raise TypeError("Inputs must be numbers")
 
 def add(a, b):
     return a + b
@@ -42,10 +41,10 @@ def add(a, b):
 def subtract(a, b):
     return a - b
 
-def multiply(a, b):
+def mul(a, b):
     return a * b
 
-def divide(a, b):
+def div(a, b):
     if a == 0:
         raise ZeroDivisionError("Cannot divide by zero")
     return b / a
@@ -55,5 +54,5 @@ def logarithm(a, b):
         raise ValueError("Invalid input for logarithm")
     return math.log(b, a)
 
-def exponent(a, b):
+def exp(a, b):
     return a ** b
