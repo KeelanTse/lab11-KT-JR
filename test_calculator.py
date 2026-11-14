@@ -16,9 +16,9 @@ class TestCalculator(unittest.TestCase):
 
     ######## Partner 1
     def test_multiply(self): # 3 assertions
-        self.assertEqual(multiply(2, 3), 6)
-        self.assertEqual(multiply(-2, 3), -6)
-        self.assertEqual(multiply(0, 5), 0)
+        self.assertEqual(mul(2, 3), 6)
+        self.assertEqual(mul(-2, 3), -6)
+        self.assertEqual(mul(0, 5), 0)
 
     def test_divide(self): # 3 assertions
         self.assertEqual(div(2, 10), 5)
@@ -55,7 +55,7 @@ class TestCalculator(unittest.TestCase):
         with self.assertRaises(ValueError):
             square_root(-4)
         self.assertAlmostEqual(square_root(9), 3)
-        self.assertAlmostEqual(square_root(0), 0)
+        self.assertAlmostEqual(square_root(2), 1.41421356, places=6)
     ##########################
 
 # Do not touch this
